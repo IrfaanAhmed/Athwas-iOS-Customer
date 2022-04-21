@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>544469837523-583huoe7dkvqp1jqi3vogu5uugst961s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.544469837523-583huoe7dkvqp1jqi3vogu5uugst961s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>544469837523-73jbbnajo7l2og9pn680c17cuo4o7b1u.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCuN00mm1m9eA6j3ieQWqnYGoZdaFwOALc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>544469837523</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.athwas</string>
+	<key>PROJECT_ID</key>
+	<string>athwas-294012</string>
+	<key>STORAGE_BUCKET</key>
+	<string>athwas-294012.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:544469837523:ios:f8014b4d4b12812e2fd626</string>
+	<key>DATABASE_URL</key>
+	<string>https://athwas-294012.firebaseio.com</string>
+</dict>
+</plist>

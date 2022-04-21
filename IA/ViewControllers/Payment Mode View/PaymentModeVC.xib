@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Regular.otf">
+            <string>Linotte-Regular</string>
+        </array>
+        <array key="Linotte Semi Bold.otf">
+            <string>Linotte-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentModeVC" customModule="IA" customModuleProvider="target">
+            <connections>
+                <outlet property="tableViewPayments" destination="2Uj-yV-vjQ" id="54p-36-VJl"/>
+                <outlet property="view" destination="z0H-Tb-Wbt" id="Igj-Au-0Ii"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="z0H-Tb-Wbt">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsJ-iQ-8Va">
+                    <rect key="frame" x="0.0" y="542" width="414" height="320"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TSh-Gk-7dy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Payment Option" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkp-Tx-gYy">
+                                    <rect key="frame" x="16" y="15" width="175.5" height="20"/>
+                                    <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2r-9H-oKF">
+                                    <rect key="frame" x="354" y="3" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="i0G-bS-SUa"/>
+                                        <constraint firstAttribute="width" constant="44" id="skY-Rj-bwo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Linotte-Regular" family="Linotte-Regular" pointSize="22"/>
+                                    <state key="normal" title="X">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDismiss:" destination="-1" eventType="touchUpInside" id="sp3-Yv-hYu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="AppGreenLightColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="IW2-MO-LK1"/>
+                                <constraint firstItem="Nkp-Tx-gYy" firstAttribute="leading" secondItem="TSh-Gk-7dy" secondAttribute="leading" constant="16" id="UL1-PV-ImO"/>
+                                <constraint firstItem="Nkp-Tx-gYy" firstAttribute="centerY" secondItem="TSh-Gk-7dy" secondAttribute="centerY" id="WbS-LQ-LVP"/>
+                                <constraint firstItem="q2r-9H-oKF" firstAttribute="centerY" secondItem="TSh-Gk-7dy" secondAttribute="centerY" id="hR3-X9-fNG"/>
+                                <constraint firstAttribute="trailing" secondItem="q2r-9H-oKF" secondAttribute="trailing" constant="16" id="oNM-R3-G0K"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-yV-vjQ">
+                            <rect key="frame" x="0.0" y="50" width="414" height="220"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="separatorColor" systemColor="opaqueSeparatorColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="uBV-fk-DUf"/>
+                                <outlet property="delegate" destination="-1" id="uSW-qK-7YU"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="isg-Uf-leb" customClass="GradientButton" customModule="IA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="270" width="414" height="50"/>
+                            <color key="backgroundColor" name="AppGreenLightColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Mz6-lZ-eWq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="17"/>
+                            <state key="normal" title="Apply">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                    <color key="value" red="0.30845612290000002" green="0.51145708560000003" blue="0.080930747090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                    <color key="value" red="0.64837181570000002" green="0.75421601530000004" blue="0.26917779450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnApply:" destination="-1" eventType="touchUpInside" id="4sD-Eu-0Op"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="isg-Uf-leb" secondAttribute="bottom" id="2aG-Z9-w70"/>
+                        <constraint firstAttribute="trailing" secondItem="TSh-Gk-7dy" secondAttribute="trailing" id="9zS-Sx-p17"/>
+                        <constraint firstItem="TSh-Gk-7dy" firstAttribute="leading" secondItem="CsJ-iQ-8Va" secondAttribute="leading" id="Maj-HJ-slw"/>
+                        <constraint firstAttribute="height" constant="320" id="Mqt-wb-xAf"/>
+                        <constraint firstItem="isg-Uf-leb" firstAttribute="leading" secondItem="CsJ-iQ-8Va" secondAttribute="leading" id="PVd-66-CBL"/>
+                        <constraint firstItem="isg-Uf-leb" firstAttribute="top" secondItem="2Uj-yV-vjQ" secondAttribute="bottom" id="QP0-TM-7cK"/>
+                        <constraint firstAttribute="trailing" secondItem="isg-Uf-leb" secondAttribute="trailing" id="WiW-ya-vxN"/>
+                        <constraint firstItem="2Uj-yV-vjQ" firstAttribute="top" secondItem="TSh-Gk-7dy" secondAttribute="bottom" id="i6Y-Gp-mN9"/>
+                        <constraint firstItem="TSh-Gk-7dy" firstAttribute="top" secondItem="CsJ-iQ-8Va" secondAttribute="top" id="sKb-sk-bjS"/>
+                        <constraint firstItem="2Uj-yV-vjQ" firstAttribute="leading" secondItem="CsJ-iQ-8Va" secondAttribute="leading" id="tz4-D7-nsq"/>
+                        <constraint firstAttribute="trailing" secondItem="2Uj-yV-vjQ" secondAttribute="trailing" id="y8y-Zg-dfU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="deU-gO-izR"/>
+            <color key="backgroundColor" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="0.84080693490000002" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CsJ-iQ-8Va" firstAttribute="leading" secondItem="deU-gO-izR" secondAttribute="leading" id="oBL-Um-ZGY"/>
+                <constraint firstItem="CsJ-iQ-8Va" firstAttribute="bottom" secondItem="deU-gO-izR" secondAttribute="bottom" id="q44-lc-Nb5"/>
+                <constraint firstItem="CsJ-iQ-8Va" firstAttribute="trailing" secondItem="deU-gO-izR" secondAttribute="trailing" id="qMh-nD-7hL"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

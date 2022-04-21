@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Bold.otf">
+            <string>Linotte-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CheckoutVC" customModule="IA" customModuleProvider="target">
+            <connections>
+                <outlet property="btnPlaceOrder" destination="U6j-QM-Weg" id="8Dy-HX-SOj"/>
+                <outlet property="btnPlaceOrderBg" destination="nmq-Oc-q9D" id="Mob-7G-h4m"/>
+                <outlet property="btnPlaceOrderUp" destination="Tp6-Vk-a4D" id="3rU-lt-0aV"/>
+                <outlet property="tableView" destination="vpv-eQ-0Vf" id="ftJ-m5-ibq"/>
+                <outlet property="view" destination="iN0-l3-epB" id="FY2-gb-tSC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qd3-ui-z4x">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="cRi-LM-Ezz"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-eQ-0Vf">
+                    <rect key="frame" x="0.0" y="44" width="375" height="573"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="t40-Ce-f4W">
+                        <rect key="frame" x="0.0" y="666" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="WE4-J8-MbY"/>
+                        <outlet property="delegate" destination="-1" id="6dY-Dl-pEm"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmq-Oc-q9D">
+                    <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                    <color key="backgroundColor" red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="0.11720730611030629" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="W7N-wx-Gc0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Linotte-Bold" family="Linotte-Bold" pointSize="17"/>
+                    <state key="normal" title="Placing Your Order">
+                        <color key="titleColor" name="AppGreenLightColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="1" height="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="AppGreenLightColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                            <color key="value" name="AppGreenDarkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                            <color key="value" name="AppGreenLightColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-QM-Weg" customClass="GradientButton" customModule="IA" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="6e5-Ix-at7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Linotte-Bold" family="Linotte-Bold" pointSize="17"/>
+                    <state key="normal" title="Swipe to Place Order">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="1" height="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                            <color key="value" name="AppGreenDarkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                            <color key="value" name="AppGreenLightColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tp6-Vk-a4D">
+                    <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="aXe-Ee-yp5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Linotte-Bold" family="Linotte-Bold" pointSize="17"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                            <size key="value" width="1" height="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                            <color key="value" name="AppGreenDarkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                            <color key="value" name="AppGreenLightColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Tp6-Vk-a4D" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="01c-Zb-nzC"/>
+                <constraint firstItem="U6j-QM-Weg" firstAttribute="top" secondItem="vpv-eQ-0Vf" secondAttribute="bottom" constant="4" id="04J-gy-sfc"/>
+                <constraint firstItem="Qd3-ui-z4x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="6cW-xh-NaY"/>
+                <constraint firstItem="nmq-Oc-q9D" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ab1-ms-0FM"/>
+                <constraint firstItem="vpv-eQ-0Vf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="C8A-wg-1wZ"/>
+                <constraint firstItem="Qd3-ui-z4x" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Dg5-CW-k2Q"/>
+                <constraint firstItem="Qd3-ui-z4x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="EeH-pN-g7a"/>
+                <constraint firstItem="Tp6-Vk-a4D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Jo5-Ph-qC3"/>
+                <constraint firstItem="nmq-Oc-q9D" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="c2d-O3-1pd"/>
+                <constraint firstItem="vpv-eQ-0Vf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ewc-oS-EJx"/>
+                <constraint firstItem="U6j-QM-Weg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="f8v-nh-qiA"/>
+                <constraint firstItem="nmq-Oc-q9D" firstAttribute="top" secondItem="vpv-eQ-0Vf" secondAttribute="bottom" constant="4" id="gbR-YF-ynz"/>
+                <constraint firstItem="Tp6-Vk-a4D" firstAttribute="top" secondItem="vpv-eQ-0Vf" secondAttribute="bottom" constant="4" id="hCM-bJ-fPH"/>
+                <constraint firstItem="Tp6-Vk-a4D" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="iFX-7m-uK0"/>
+                <constraint firstItem="vpv-eQ-0Vf" firstAttribute="top" secondItem="Qd3-ui-z4x" secondAttribute="bottom" id="mq9-qe-T6T"/>
+                <constraint firstItem="U6j-QM-Weg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="uSm-XQ-gyT"/>
+                <constraint firstItem="U6j-QM-Weg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="vvv-gq-JfO"/>
+                <constraint firstItem="nmq-Oc-q9D" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wjI-O7-PUS"/>
+            </constraints>
+            <point key="canvasLocation" x="141.59999999999999" y="71.514242878560722"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppGreenDarkColor">
+            <color red="0.44705882352941179" green="0.54117647058823526" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

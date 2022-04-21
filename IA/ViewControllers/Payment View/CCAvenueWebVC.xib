@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CCAvenueWebVC" customModule="IA" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webCCV" destination="3Ht-WZ-CMU" id="2jB-n7-7Ha"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OsB-Za-tSY">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="h5R-jc-rBU"/>
+                    </constraints>
+                </view>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ht-WZ-CMU">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3Ht-WZ-CMU" secondAttribute="bottom" id="A9V-5e-D7z"/>
+                <constraint firstItem="OsB-Za-tSY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BKS-Uf-S0X"/>
+                <constraint firstItem="3Ht-WZ-CMU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="HD8-ry-l1y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="OsB-Za-tSY" secondAttribute="trailing" id="HJp-9i-ive"/>
+                <constraint firstItem="3Ht-WZ-CMU" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="HZr-S7-IRN"/>
+                <constraint firstItem="3Ht-WZ-CMU" firstAttribute="top" secondItem="OsB-Za-tSY" secondAttribute="bottom" id="PiV-T2-CER"/>
+                <constraint firstItem="OsB-Za-tSY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="r7V-R4-4vN"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="77.678571428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

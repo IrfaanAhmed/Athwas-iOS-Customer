@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Semi Bold.otf">
+            <string>Linotte-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderTrackMapVC" customModule="IA" customModuleProvider="target">
+            <connections>
+                <outlet property="btnReCenter" destination="QZc-Kv-GAq" id="pM9-ly-s8E"/>
+                <outlet property="mapView" destination="KFJ-7C-aoA" id="0Hv-4H-eia"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYY-fJ-0ac">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DP6-X7-XBk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFJ-7C-aoA" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZc-Kv-GAq" customClass="GradientButton" customModule="IA" customModuleProvider="target">
+                    <rect key="frame" x="132" y="822" width="150" height="40"/>
+                    <color key="backgroundColor" name="AppGreenDarkColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Nww-SO-KCY"/>
+                        <constraint firstAttribute="height" constant="40" id="lf2-uA-fdD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="17"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Re-Center">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                            <color key="value" name="AppGreenDarkColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                            <color key="value" name="AppGreenLightColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnReCenterTap:" destination="-1" eventType="touchUpInside" id="nUV-tR-Ut5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QZc-Kv-GAq" secondAttribute="bottom" id="1ja-hz-Lq3"/>
+                <constraint firstAttribute="bottom" secondItem="KFJ-7C-aoA" secondAttribute="bottom" id="Gix-Fv-tT3"/>
+                <constraint firstItem="fYY-fJ-0ac" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H8G-ac-AkV"/>
+                <constraint firstItem="fYY-fJ-0ac" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IFY-aj-CAf"/>
+                <constraint firstItem="KFJ-7C-aoA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Wtf-yy-SIe"/>
+                <constraint firstItem="QZc-Kv-GAq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bLQ-Jc-zDy"/>
+                <constraint firstItem="KFJ-7C-aoA" firstAttribute="top" secondItem="fYY-fJ-0ac" secondAttribute="bottom" id="eCt-wF-gq4"/>
+                <constraint firstItem="KFJ-7C-aoA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="h5J-ZW-cGn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fYY-fJ-0ac" secondAttribute="trailing" id="oUv-db-EBq"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppGreenDarkColor">
+            <color red="0.44705882352941179" green="0.54117647058823526" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

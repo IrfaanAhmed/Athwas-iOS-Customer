@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Regular.otf">
+            <string>Linotte-Regular</string>
+        </array>
+        <array key="Linotte Semi Bold.otf">
+            <string>Linotte-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InnerFilterVC" customModule="IA">
+            <connections>
+                <outlet property="tableViewCat" destination="EG2-HG-Nrc" id="O9D-zy-RMp"/>
+                <outlet property="tableViewSub" destination="2j1-QO-ES3" id="kYi-bm-KeX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKr-bi-dpO" customClass="GradientButton" customModule="IA" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="vBn-eA-V0T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="17"/>
+                    <state key="normal" title="Apply Filter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                            <color key="value" red="0.30845612290000002" green="0.51145708560000003" blue="0.080930747090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                            <color key="value" red="0.64837181570000002" green="0.75421601530000004" blue="0.26917779450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="btnApply:" destination="-1" eventType="touchUpInside" id="zGj-qy-C79"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-ix-RKy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-Bk-Zj9">
+                            <rect key="frame" x="162" y="16.5" width="51.5" height="22.5"/>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QI-Qu-AzZ">
+                            <rect key="frame" x="255" y="11" width="100" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="o0d-FI-cue"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Linotte-Regular" family="Linotte-Regular" pointSize="18"/>
+                            <state key="normal" title="Reset Filter">
+                                <color key="titleColor" name="AppBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="btnReset:" destination="-1" eventType="touchUpInside" id="4Si-uA-kLE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ui-kb-HBo">
+                            <rect key="frame" x="12" y="12.5" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="7IV-nk-aa2"/>
+                                <constraint firstAttribute="height" constant="30" id="qh9-Oo-u1Z"/>
+                            </constraints>
+                            <state key="normal" image="back1">
+                                <color key="titleColor" name="AppBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="btnDismiss:" destination="-1" eventType="touchUpInside" id="CTn-5Y-cXL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="AppGreenLightColor"/>
+                    <constraints>
+                        <constraint firstItem="lZU-Bk-Zj9" firstAttribute="centerX" secondItem="h6P-ix-RKy" secondAttribute="centerX" id="JZ4-Aw-a0q"/>
+                        <constraint firstItem="7QI-Qu-AzZ" firstAttribute="centerY" secondItem="lZU-Bk-Zj9" secondAttribute="centerY" id="NUa-22-k5c"/>
+                        <constraint firstAttribute="trailing" secondItem="7QI-Qu-AzZ" secondAttribute="trailing" constant="20" id="Ukm-Og-lun"/>
+                        <constraint firstItem="6ui-kb-HBo" firstAttribute="leading" secondItem="h6P-ix-RKy" secondAttribute="leading" constant="12" id="tuF-dn-LeJ"/>
+                        <constraint firstItem="6ui-kb-HBo" firstAttribute="centerY" secondItem="lZU-Bk-Zj9" secondAttribute="centerY" id="uL7-w3-qMH"/>
+                        <constraint firstAttribute="height" constant="55" id="vh3-1r-fj4"/>
+                        <constraint firstItem="lZU-Bk-Zj9" firstAttribute="centerY" secondItem="h6P-ix-RKy" secondAttribute="centerY" id="viC-u9-OZc"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxS-0Z-1JC">
+                    <rect key="frame" x="0.0" y="55" width="375" height="562"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EG2-HG-Nrc">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="562"/>
+                            <color key="backgroundColor" red="0.83873611690000005" green="0.88323324920000001" blue="0.92057591679999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="vDt-kP-npv"/>
+                            </constraints>
+                            <color key="separatorColor" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="WvX-h2-Rjz"/>
+                                <outlet property="delegate" destination="-1" id="uhX-Pz-80t"/>
+                            </connections>
+                        </tableView>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2j1-QO-ES3">
+                            <rect key="frame" x="150" y="0.0" width="225" height="562"/>
+                            <color key="separatorColor" systemColor="systemGray5Color"/>
+                            <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Vc9-Py-BFJ"/>
+                                <outlet property="delegate" destination="-1" id="1sP-0p-i4p"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h6P-ix-RKy" secondAttribute="trailing" id="5nP-r7-GJX"/>
+                <constraint firstAttribute="trailing" secondItem="vxS-0Z-1JC" secondAttribute="trailing" id="8Nu-As-tI8"/>
+                <constraint firstItem="FKr-bi-dpO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Ifm-HX-vpG"/>
+                <constraint firstItem="FKr-bi-dpO" firstAttribute="top" secondItem="vxS-0Z-1JC" secondAttribute="bottom" id="QPh-Oa-ky6"/>
+                <constraint firstItem="vxS-0Z-1JC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TaH-GH-PIQ"/>
+                <constraint firstItem="h6P-ix-RKy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZnU-EK-k8e"/>
+                <constraint firstItem="h6P-ix-RKy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="geL-Qy-1lR"/>
+                <constraint firstItem="FKr-bi-dpO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="j0z-xq-X6G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FKr-bi-dpO" secondAttribute="bottom" id="xcq-o4-yVM"/>
+                <constraint firstItem="vxS-0Z-1JC" firstAttribute="top" secondItem="h6P-ix-RKy" secondAttribute="bottom" id="zVC-pT-Jfw"/>
+            </constraints>
+            <point key="canvasLocation" x="130.40000000000001" y="136.28185907046478"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back1" width="16.666666030883789" height="16.666666030883789"/>
+        <namedColor name="AppBlueColor">
+            <color red="0.2196078431372549" green="0.16862745098039217" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Light.otf">
+            <string>Linotte-Light</string>
+        </array>
+        <array key="Linotte Regular.otf">
+            <string>Linotte-Regular</string>
+        </array>
+        <array key="Linotte Semi Bold.otf">
+            <string>Linotte-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterVC" customModule="IA" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCustomization" destination="pH7-wx-K6i" id="35p-Hs-4zZ"/>
+                <outlet property="ratingStackView1" destination="0Xp-od-bVO" id="teh-cP-nRn"/>
+                <outlet property="ratingStackView2" destination="Gmv-h1-SXH" id="41K-Jm-KlT"/>
+                <outlet property="txtBrand" destination="Yo0-7S-9wh" id="IME-Qc-sUL"/>
+                <outlet property="txtCategory" destination="jXd-HD-ezz" id="IJF-DR-sGM"/>
+                <outlet property="txtMax" destination="heg-sn-vXe" id="5h0-Vd-QjG"/>
+                <outlet property="txtMin" destination="xE6-mO-vaC" id="tQJ-Zw-08f"/>
+                <outlet property="txtSubCategory" destination="lM4-u6-X5K" id="NRv-l9-iwr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewRadius" destination="M8s-bO-EEs" id="M3D-ZL-bNd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-bO-EEs">
+                    <rect key="frame" x="0.0" y="296" width="414" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6P-ix-RKy">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZU-Bk-Zj9">
+                                    <rect key="frame" x="181" y="18" width="52" height="19"/>
+                                    <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7QI-Qu-AzZ">
+                                    <rect key="frame" x="294" y="12.5" width="100" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="o0d-FI-cue"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Linotte-Regular" family="Linotte-Regular" pointSize="18"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" name="AppBlueColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDismiss:" destination="-1" eventType="touchUpInside" id="VqU-i6-wWp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ui-kb-HBo">
+                                    <rect key="frame" x="20" y="12.5" width="100" height="30"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="7IV-nk-aa2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="18"/>
+                                    <state key="normal" title="Reset">
+                                        <color key="titleColor" name="AppBlueColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnReset:" destination="-1" eventType="touchUpInside" id="3Ny-7S-BVx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" name="AppGreenLightColor"/>
+                            <constraints>
+                                <constraint firstItem="lZU-Bk-Zj9" firstAttribute="centerX" secondItem="h6P-ix-RKy" secondAttribute="centerX" id="JZ4-Aw-a0q"/>
+                                <constraint firstItem="7QI-Qu-AzZ" firstAttribute="centerY" secondItem="lZU-Bk-Zj9" secondAttribute="centerY" id="NUa-22-k5c"/>
+                                <constraint firstAttribute="trailing" secondItem="7QI-Qu-AzZ" secondAttribute="trailing" constant="20" id="Ukm-Og-lun"/>
+                                <constraint firstItem="6ui-kb-HBo" firstAttribute="leading" secondItem="h6P-ix-RKy" secondAttribute="leading" constant="20" id="tuF-dn-LeJ"/>
+                                <constraint firstItem="6ui-kb-HBo" firstAttribute="centerY" secondItem="lZU-Bk-Zj9" secondAttribute="centerY" id="uL7-w3-qMH"/>
+                                <constraint firstAttribute="height" constant="55" id="vh3-1r-fj4"/>
+                                <constraint firstItem="lZU-Bk-Zj9" firstAttribute="centerY" secondItem="h6P-ix-RKy" secondAttribute="centerY" id="viC-u9-OZc"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Xi5-Au-gM4">
+                            <rect key="frame" x="20" y="71" width="39" height="18"/>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WxE-kf-UDZ">
+                            <rect key="frame" x="20" y="99" width="374" height="45"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Min. Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xE6-mO-vaC">
+                                    <rect key="frame" x="0.0" y="0.0" width="182" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="AppGreenDarkColor"/>
+                                    <fontDescription key="fontDescription" name="Linotte-Light" family="Linotte-Light" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Max. Price" textAlignment="center" minimumFontSize="17" id="heg-sn-vXe">
+                                    <rect key="frame" x="192" y="0.0" width="182" height="45"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" name="AppGreenDarkColor"/>
+                                    <fontDescription key="fontDescription" name="Linotte-Light" family="Linotte-Light" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="UIk-hQ-M30"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Rating" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="IBe-sK-GYa">
+                            <rect key="frame" x="20" y="164" width="133.5" height="18"/>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Xp-od-bVO">
+                            <rect key="frame" x="20" y="192" width="374" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co2-hm-i1M">
+                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="All" image="star_gray">
+                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="star_white">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnSelectRating:" destination="-1" eventType="touchUpInside" id="xTL-sg-Ffs"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-uW-Myg">
+                                    <rect key="frame" x="127.5" y="0.0" width="119" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="1 &amp; above" image="star_gray">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="star_white">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnSelectRating:" destination="-1" eventType="touchUpInside" id="8NJ-jP-hqf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMN-dy-Bdx">
+                                    <rect key="frame" x="254.5" y="0.0" width="119.5" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="2 &amp; above" image="star_gray">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="star_white">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnSelectRating:" destination="-1" eventType="touchUpInside" id="U5C-VF-5br"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="oZU-yS-vui"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gmv-h1-SXH">
+                            <rect key="frame" x="20" y="232" width="247" height="30"/>
+                            <subviews>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3kD-9h-X87">
+                                    <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="3 &amp; above" image="star_gray">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="star_white">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnSelectRating:" destination="-1" eventType="touchUpInside" id="Qz2-Vq-aXZ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US8-14-0Mu">
+                                    <rect key="frame" x="127.5" y="0.0" width="119.5" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="4 &amp; above" image="star_gray">
+                                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected" image="star_white">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnSelectRating:" destination="-1" eventType="touchUpInside" id="AHL-EN-GUd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="zEw-K1-NIK"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oh9-CK-QMb">
+                            <rect key="frame" x="20" y="282" width="374" height="155"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Category" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jXd-HD-ezz">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Linotte-Light" family="Linotte-Light" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="krO-ZZ-yvD"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sub - Category" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lM4-u6-X5K">
+                                    <rect key="frame" x="0.0" y="55" width="374" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Linotte-Light" family="Linotte-Light" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="g0j-Gw-xwx"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Brand" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yo0-7S-9wh">
+                                    <rect key="frame" x="0.0" y="110" width="374" height="45"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Linotte-Light" family="Linotte-Light" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.90884755709999998" green="0.90884755709999998" blue="0.90884755709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="bxa-qZ-yMh"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="ugI-20-iSm"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="155" id="fOl-ls-51p"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKr-bi-dpO" customClass="GradientButton" customModule="IA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="520" width="424" height="50"/>
+                            <color key="backgroundColor" name="AppGreenLightColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="vBn-eA-V0T"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="17"/>
+                            <state key="normal" title="Apply Filter">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                    <color key="value" red="0.30845612290000002" green="0.51145708560000003" blue="0.080930747090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                    <color key="value" red="0.64837181570000002" green="0.75421601530000004" blue="0.26917779450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnApply:" destination="-1" eventType="touchUpInside" id="zGj-qy-C79"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pH7-wx-K6i">
+                            <rect key="frame" x="24" y="457" width="366" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="p3T-gL-aYe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Linotte-SemiBold" family="Linotte-SemiBold" pointSize="16"/>
+                            <state key="normal" title="Customization">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="leftGradientColor">
+                                    <color key="value" red="0.30845612290000002" green="0.51145708560000003" blue="0.080930747090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="rightGradientColor">
+                                    <color key="value" red="0.64837181570000002" green="0.75421601530000004" blue="0.26917779450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="16"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnCustomizationTap:" destination="-1" eventType="touchUpInside" id="GQ2-Zp-4Xj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="FKr-bi-dpO" secondAttribute="trailing" constant="-10" id="4VT-CV-UNw"/>
+                        <constraint firstAttribute="trailing" secondItem="oh9-CK-QMb" secondAttribute="trailing" constant="20" id="7XF-B4-sKa"/>
+                        <constraint firstItem="Gmv-h1-SXH" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" symbolic="YES" id="9X7-Qn-qRv"/>
+                        <constraint firstItem="0Xp-od-bVO" firstAttribute="top" secondItem="IBe-sK-GYa" secondAttribute="bottom" constant="10" id="AOb-uc-6cg"/>
+                        <constraint firstItem="h6P-ix-RKy" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" id="BAC-81-WMI"/>
+                        <constraint firstItem="Gmv-h1-SXH" firstAttribute="top" secondItem="0Xp-od-bVO" secondAttribute="bottom" constant="10" id="C2k-zU-som"/>
+                        <constraint firstAttribute="trailing" secondItem="h6P-ix-RKy" secondAttribute="trailing" id="FFz-ET-XKI"/>
+                        <constraint firstAttribute="trailing" secondItem="WxE-kf-UDZ" secondAttribute="trailing" constant="20" id="GQb-Da-Qra"/>
+                        <constraint firstItem="FKr-bi-dpO" firstAttribute="top" secondItem="pH7-wx-K6i" secondAttribute="bottom" constant="23" id="LgB-Wl-4Bi"/>
+                        <constraint firstItem="Gmv-h1-SXH" firstAttribute="width" secondItem="0Xp-od-bVO" secondAttribute="width" multiplier="0.66" id="OjC-kH-19F"/>
+                        <constraint firstItem="h6P-ix-RKy" firstAttribute="top" secondItem="M8s-bO-EEs" secondAttribute="top" id="Q1G-n9-VoX"/>
+                        <constraint firstItem="pH7-wx-K6i" firstAttribute="top" secondItem="oh9-CK-QMb" secondAttribute="bottom" constant="20" id="R8K-hY-eJg"/>
+                        <constraint firstItem="oh9-CK-QMb" firstAttribute="top" secondItem="Gmv-h1-SXH" secondAttribute="bottom" constant="20" id="RS4-nu-Rhd"/>
+                        <constraint firstItem="0Xp-od-bVO" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" id="b2X-pI-wFy"/>
+                        <constraint firstAttribute="trailing" secondItem="pH7-wx-K6i" secondAttribute="trailing" constant="24" id="bRx-7U-Xae"/>
+                        <constraint firstAttribute="bottom" secondItem="FKr-bi-dpO" secondAttribute="bottom" constant="30" id="gRD-Tn-Exk"/>
+                        <constraint firstAttribute="trailing" secondItem="0Xp-od-bVO" secondAttribute="trailing" constant="20" id="hU4-Zj-CUc"/>
+                        <constraint firstItem="Xi5-Au-gM4" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" id="hum-1K-fUv"/>
+                        <constraint firstItem="IBe-sK-GYa" firstAttribute="top" secondItem="WxE-kf-UDZ" secondAttribute="bottom" constant="20" id="kRu-fD-HOW"/>
+                        <constraint firstItem="WxE-kf-UDZ" firstAttribute="top" secondItem="Xi5-Au-gM4" secondAttribute="bottom" constant="10" id="lmx-OE-oTR"/>
+                        <constraint firstItem="WxE-kf-UDZ" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" id="nM3-8Q-PzX"/>
+                        <constraint firstItem="oh9-CK-QMb" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" id="p88-r6-Ctn"/>
+                        <constraint firstItem="IBe-sK-GYa" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="20" id="pIN-tB-Uj9"/>
+                        <constraint firstItem="pH7-wx-K6i" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" constant="24" id="xLH-iY-Q1M"/>
+                        <constraint firstItem="Xi5-Au-gM4" firstAttribute="top" secondItem="h6P-ix-RKy" secondAttribute="bottom" constant="16" id="xgE-EU-c5V"/>
+                        <constraint firstItem="FKr-bi-dpO" firstAttribute="leading" secondItem="M8s-bO-EEs" secondAttribute="leading" id="xjb-a4-wPa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.77000000000000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="M8s-bO-EEs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nk0-FQ-34g"/>
+                <constraint firstAttribute="bottom" secondItem="M8s-bO-EEs" secondAttribute="bottom" id="ZQ2-wB-VGV"/>
+                <constraint firstItem="M8s-bO-EEs" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zxw-z5-GBX"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="star_gray" width="15.5" height="15"/>
+        <image name="star_white" width="15.5" height="15"/>
+        <namedColor name="AppBlueColor">
+            <color red="0.2196078431372549" green="0.16862745098039217" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppGreenDarkColor">
+            <color red="0.44705882352941179" green="0.54117647058823526" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppGreenLightColor">
+            <color red="0.60392156862745094" green="0.72156862745098038" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

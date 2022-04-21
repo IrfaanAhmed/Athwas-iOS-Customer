@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Regular.otf">
+            <string>Linotte-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="TableViewCellSort" customModule="IA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBV-kg-nad">
+                        <rect key="frame" x="20" y="12" width="43.5" height="26"/>
+                        <fontDescription key="fontDescription" name="Linotte-Regular" family="Linotte-Regular" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_check" translatesAutoresizingMaskIntoConstraints="NO" id="pnY-6f-dhQ">
+                        <rect key="frame" x="281" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="M81-7I-S32"/>
+                            <constraint firstAttribute="width" constant="20" id="ypC-TF-njU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="pnY-6f-dhQ" secondAttribute="trailing" constant="25" id="1U8-Ba-kHG"/>
+                    <constraint firstItem="pnY-6f-dhQ" firstAttribute="centerY" secondItem="dBV-kg-nad" secondAttribute="centerY" id="2ws-aq-7V5"/>
+                    <constraint firstAttribute="bottom" secondItem="dBV-kg-nad" secondAttribute="bottom" constant="12" id="N13-tp-cAh"/>
+                    <constraint firstItem="dBV-kg-nad" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="W4M-CV-PPL"/>
+                    <constraint firstItem="dBV-kg-nad" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p56-Ql-Ac6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+            <connections>
+                <outlet property="imgSelection" destination="pnY-6f-dhQ" id="9Ci-mk-eoZ"/>
+                <outlet property="lblTitle" destination="dBV-kg-nad" id="NuC-wI-cpI"/>
+            </connections>
+            <point key="canvasLocation" x="136.23188405797103" y="147.99107142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="list_check" width="18" height="13.5"/>
+    </resources>
+</document>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Linotte Regular.otf">
+            <string>Linotte-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="Umj-jh-aSn" customClass="FilterSubCatCell" customModule="IA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Umj-jh-aSn" id="Q3D-gW-rrn">
+                <rect key="frame" x="0.0" y="0.0" width="326" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="mcS-Mn-LhD">
+                        <rect key="frame" x="16" y="15" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="L1M-nC-own"/>
+                            <constraint firstAttribute="width" constant="20" id="ljM-5z-3Pb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwn-Bm-ZLg">
+                        <rect key="frame" x="48" y="12" width="262" height="26"/>
+                        <fontDescription key="fontDescription" name="Linotte-Regular" family="Linotte-Regular" pointSize="17"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lwn-Bm-ZLg" secondAttribute="bottom" constant="12" id="CaU-tb-wAZ"/>
+                    <constraint firstAttribute="trailing" secondItem="lwn-Bm-ZLg" secondAttribute="trailing" constant="16" id="IfI-Ad-qKM"/>
+                    <constraint firstItem="mcS-Mn-LhD" firstAttribute="centerY" secondItem="lwn-Bm-ZLg" secondAttribute="centerY" id="R7g-gT-Usv"/>
+                    <constraint firstItem="lwn-Bm-ZLg" firstAttribute="leading" secondItem="mcS-Mn-LhD" secondAttribute="trailing" constant="12" id="Yk7-ZC-8Ry"/>
+                    <constraint firstItem="lwn-Bm-ZLg" firstAttribute="top" secondItem="Q3D-gW-rrn" secondAttribute="top" constant="12" id="jW5-Lv-x4A"/>
+                    <constraint firstItem="mcS-Mn-LhD" firstAttribute="leading" secondItem="Q3D-gW-rrn" secondAttribute="leading" constant="16" id="lhz-Rv-T0S"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="xun-FH-cQB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+            <connections>
+                <outlet property="imgSelection" destination="mcS-Mn-LhD" id="JRW-yB-2UR"/>
+                <outlet property="lblTitle" destination="lwn-Bm-ZLg" id="eY9-QL-OTW"/>
+            </connections>
+            <point key="canvasLocation" x="-171" y="145"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="uncheck" width="16" height="16"/>
+    </resources>
+</document>

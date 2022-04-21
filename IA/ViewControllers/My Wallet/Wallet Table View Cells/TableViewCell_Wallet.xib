@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FAKTPRO-MEDIUM.TTF">
+            <string>FaktPro-Medium</string>
+        </array>
+        <array key="FAKTPRO-NORMAL.TTF">
+            <string>FaktPro-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="106" id="KGk-i7-Jjw" customClass="TableViewCell_Wallet" customModule="IA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7M-VH-iI7">
+                        <rect key="frame" x="16" y="8" width="382" height="90"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Provider/Operator" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NSK-4A-zOZ">
+                                <rect key="frame" x="8" y="12" width="366" height="19.5"/>
+                                <fontDescription key="fontDescription" name="FaktPro-Medium" family="Fakt Pro" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01 May 2020, 10.00 AM" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSL-gu-3eE">
+                                <rect key="frame" x="8" y="64" width="128" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="3So-gb-YdQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FaktPro-Normal" family="Fakt Pro" pointSize="12"/>
+                                <color key="textColor" name="AppBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xD-3k-FpH">
+                                <rect key="frame" x="324" y="38.5" width="50" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="NDD-Cn-IDK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FaktPro-Medium" family="Fakt Pro" pointSize="16"/>
+                                <color key="textColor" name="AppGreenDarkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9i-5k-9gA">
+                                <rect key="frame" x="8" y="39.5" width="40.5" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16.5" id="9VR-Ip-Va1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FaktPro-Normal" family="Fakt Pro" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SSL-gu-3eE" firstAttribute="top" secondItem="M9i-5k-9gA" secondAttribute="bottom" constant="8" id="1C7-vD-SH4"/>
+                            <constraint firstItem="M9i-5k-9gA" firstAttribute="leading" secondItem="j7M-VH-iI7" secondAttribute="leading" constant="8" id="BOD-ST-2aO"/>
+                            <constraint firstItem="SSL-gu-3eE" firstAttribute="leading" secondItem="j7M-VH-iI7" secondAttribute="leading" constant="8" id="N45-w9-DUt"/>
+                            <constraint firstAttribute="bottom" secondItem="SSL-gu-3eE" secondAttribute="bottom" constant="12" id="Wmd-7x-beL"/>
+                            <constraint firstItem="NSK-4A-zOZ" firstAttribute="leading" secondItem="j7M-VH-iI7" secondAttribute="leading" constant="8" id="Zk1-CT-2nb"/>
+                            <constraint firstAttribute="trailing" secondItem="0xD-3k-FpH" secondAttribute="trailing" constant="8" id="aAr-Vt-DQf"/>
+                            <constraint firstItem="M9i-5k-9gA" firstAttribute="top" secondItem="NSK-4A-zOZ" secondAttribute="bottom" constant="8" id="fGp-F8-fKe"/>
+                            <constraint firstItem="NSK-4A-zOZ" firstAttribute="top" secondItem="j7M-VH-iI7" secondAttribute="top" constant="12" id="ghy-WT-sep"/>
+                            <constraint firstAttribute="trailing" secondItem="NSK-4A-zOZ" secondAttribute="trailing" constant="8" id="kX1-EZ-PIA"/>
+                            <constraint firstItem="0xD-3k-FpH" firstAttribute="centerY" secondItem="M9i-5k-9gA" secondAttribute="centerY" id="wGJ-1N-nXo"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.59527680839999997" green="0.59527680839999997" blue="0.59527680839999997" alpha="0.59487371580000004" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j7M-VH-iI7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Rza-Bm-AIp"/>
+                    <constraint firstAttribute="bottom" secondItem="j7M-VH-iI7" secondAttribute="bottom" constant="8" id="ppg-91-s34"/>
+                    <constraint firstAttribute="trailing" secondItem="j7M-VH-iI7" secondAttribute="trailing" constant="16" id="qpT-Cn-88v"/>
+                    <constraint firstItem="j7M-VH-iI7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="rBA-7h-Az9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblAmount" destination="0xD-3k-FpH" id="fdC-Sk-EZS"/>
+                <outlet property="lblDate" destination="SSL-gu-3eE" id="hmy-1z-Fky"/>
+                <outlet property="lblDes" destination="M9i-5k-9gA" id="lf9-NA-HQU"/>
+                <outlet property="lblTitle" destination="NSK-4A-zOZ" id="sGM-OP-VYl"/>
+            </connections>
+            <point key="canvasLocation" x="200.00000000000003" y="152.00892857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppBlueColor">
+            <color red="0.2196078431372549" green="0.16862745098039217" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="AppGreenDarkColor">
+            <color red="0.44705882352941179" green="0.54117647058823526" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
